@@ -1,10 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './styles.scss';
 
-module.exports = {
-  hello: () => {
-    console.log('hello');
-  }
-};
 
-console.log('whoop');
-console.log('whoop');
+const App = () => (
+  <div>
+    <h1>Topleft React Boiler</h1>
+  </div>
+);
+
+ReactDOM.render(
+  <App/>,
+  document.getElementById('app')
+);
+
+
