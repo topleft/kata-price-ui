@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.content {
+
+  width: 80%;
+
+  @media screen and (max-width: 1360px) {
+    padding: $space*.75 $space*.5;
+    width: 100%;
+  }
+
+}
