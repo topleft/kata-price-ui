@@ -1,30 +1,45 @@
 @import '../../styles/variables.scss';
 
+$card-height: 400px;
+$card-width: 270px;
+
 .card {
+  align-self: center;
   align-items: center;
   background-color: $white;
   box-shadow: 0px 0px 20px $grey-light;
   display: flex;
-  height: 400px;
+  flex-direction: column;
+  height: $card-height;
   justify-content: space-between;
+  margin: 0;
+  outline: 0px solid transparent;
   padding: $space*2 $space*1.5 $space*4 $space*1.5;
   position: relative;
-  flex-direction: column;
-  width: 270px;
+  width: $card-width;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    outline: 2px solid $green;
+    transform: scale(1.1);
+    z-index: 10;
+  }
 
 
   @media screen and (min-width: 540px) {
   }
 
   &__highlight {
-    color: $white;
-    padding: $space/4 $space/1.5 $space/8 $space/1.5;
     background-color: $orange;
-    text-transform: uppercase;
-    font-size: $font-size-11;
-    display: inline-block;
-
     border-radius: 2px;
+    color: $white;
+    display: inline-block;
+    font-size: $font-size-11;
+    padding: $space/4 $space/1.5 $space/8 $space/1.5;
+    text-transform: uppercase;
+    &--no-background {
+      background-color: transparent;
+    }
   }
 
   &__{
@@ -69,6 +84,13 @@
     padding: $space/1.5 $space*1.5;
     text-transform: uppercase;
     width: 150px;
+
+    &:hover {
+      background-color: $green;
+      border-color: $green;
+      color: $white;
+      cursor: pointer;
+    }
   }
 
 }

@@ -19,7 +19,7 @@ class Card extends React.PureComponent {
 
     return (
       <div className='card'>
-        <div className='card__highlight'>{highlightText}</div>
+        {highlightText ? <div className='card__highlight'>{highlightText}</div> : <div className='card__highlight--no-background'>&nbsp;</div>}
         <div className='card__title'>{title}</div>
         <div className='card__price'>
           <span className='card__price__currency-symbol'>$</span>

@@ -7,10 +7,31 @@ const cards = [
   {
     buttonText: 'Sign Up Today',
     frequency: '/mo',
-    highlightText: 'Recommended',
     list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
     price: 0,
     title: 'Free'
+  },
+  {
+    buttonText: 'Sign Up Today',
+    frequency: '/mo',
+    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
+    price: 99,
+    title: 'Professional'
+  },
+  {
+    buttonText: 'Sign Up Today',
+    frequency: '/mo',
+    highlightText: 'Recommended',
+    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
+    price: 219,
+    title: 'Small Business'
+  },
+  {
+    buttonText: 'Sign Up Today',
+    frequency: '/mo',
+    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
+    price: 419,
+    title: 'Enterprise'
   }
 ];
 

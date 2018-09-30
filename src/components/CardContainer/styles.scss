@@ -1,9 +1,21 @@
 @import '../../styles/variables.scss';
 
-.card {
-  margin: 50px auto;
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: $space*5.5 auto;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 540px) {
+    flex-direction: row;
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    max-width: 100%;
   }
 
 }
