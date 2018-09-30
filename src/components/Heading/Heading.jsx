@@ -9,7 +9,7 @@ const Heading = (props) => {
       <p className='hadding__subtitle'>{props.subtitle}</p>
     </div>
   );
-}
+};
 
 Heading.propTypes = {
   title: PropTypes.string.isRequired,
