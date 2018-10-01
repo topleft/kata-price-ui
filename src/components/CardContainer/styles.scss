@@ -3,17 +3,18 @@
 .card-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
   margin: $space*5.5 auto;
   justify-content: center;
   flex-wrap: wrap;
 
+  // force columns to be 2 (not 3 with an orphan)
   @media screen and (min-width: 540px) {
     flex-direction: row;
     max-width: 600px;
   }
 
-  @media screen and (min-width: 1140px) {
+  // allow 4 columns
+  @media screen and (min-width: 1120px) {
     flex-direction: row;
     max-width: 100%;
   }

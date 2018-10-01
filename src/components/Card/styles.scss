@@ -13,6 +13,7 @@ $card-width: 260px;
   height: $card-height;
   justify-content: space-between;
   margin: 0;
+  min-width: $card-width;
   outline: 0px solid transparent;
   padding: $space*2 $space*1.75 $space*4 $space*1.75;
   position: relative;
@@ -23,10 +24,6 @@ $card-width: 260px;
     outline: 2px solid $green;
     transform: scale(1.1);
     z-index: 10;
-  }
-
-
-  @media screen and (min-width: 540px) {
   }
 
   &__highlight {
@@ -100,7 +97,6 @@ $card-width: 260px;
     color: $grey-dark;
     padding: $space/1.5 $space*1.5;
     text-transform: uppercase;
-    width: 150px;
 
     &:hover {
       background-color: $green;
