@@ -60,7 +60,7 @@ class Content extends React.Component {
   }
 
   componentDidMount() {
-    this.getPrices()
+    this.getPrices();
   }
 
   getPrices() {
@@ -74,18 +74,18 @@ class Content extends React.Component {
       c.frequency = value;
       return c;
     });
-    this.setState({cards})
+    this.setState({cards});
   }
 
   render() {
-    const {cards} = this.state
+    const {cards} = this.state;
     return (
       <div className='content'>
         <header>
           <Heading title={title} subtitle={subtitle} />
         </header>
         <main>
-          <ButtonBlock buttons={buttons} handleClick={(value) => { this.handleFrequencyClick(value)}}/>
+          <ButtonBlock buttons={buttons} handleClick={(value) => { this.handleFrequencyClick(value);}}/>
           <CardContainer cards={cards}/>
         </main>
       </div>
