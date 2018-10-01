@@ -10,8 +10,9 @@ class ButtonBlock extends React.PureComponent {
     };
   }
 
-  handleClick(activeIndex) {
+  handleClick(activeIndex, value) {
     this.setState({activeIndex});
+    this.props.handleClick(value);
   }
 
   render() {
@@ -24,7 +25,7 @@ class ButtonBlock extends React.PureComponent {
           return <button
             key={i}
             className={`button-block__button ${isActive}`}
-            onClick={() => this.handleClick(i)} >
+            onClick={() => this.handleClick(i, button.value)} >
             {button.label}
           </button>;
         })}
@@ -35,6 +36,7 @@ class ButtonBlock extends React.PureComponent {
 
 ButtonBlock.propTypes = {
   buttons: PropTypes.array.isRequired,
+  handleClick: PropTypes.func,
 };
 
 export default ButtonBlock;

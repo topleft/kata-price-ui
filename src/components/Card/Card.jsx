@@ -7,13 +7,17 @@ class Card extends React.PureComponent {
     super();
   }
 
+  getPrice() {
+    const {pricePerMonth, pricePerYear, frequency} = this.props;
+    return frequency.includes('mo') ? pricePerMonth : pricePerYear;
+  }
+
   render() {
     const {
       buttonText,
       frequency,
       highlightText,
       list,
-      price,
       title
     } = this.props;
 
@@ -23,7 +27,7 @@ class Card extends React.PureComponent {
         <div className='card__title'>{title}</div>
         <div className='card__price'>
           <span className='card__price__currency-symbol'>$</span>
-          <span className='card__price__amount'>{price}</span>
+          <span className='card__price__amount'>{this.getPrice()}</span>
           <span className='card__price__frequency'>{frequency}</span>
         </div>
         <ul className='card__list'>
@@ -40,7 +44,8 @@ Card.propTypes = {
   frequency: PropTypes.string,
   highlightText: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
-  price: PropTypes.number,
+  pricePerMonth: PropTypes.number,
+  pricePerYear: PropTypes.number,
   title: PropTypes.string,
 };
 
