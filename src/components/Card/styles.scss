@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 $card-height: 400px;
-$card-width: 270px;
+$card-width: 260px;
 
 .card {
   align-self: center;
@@ -14,7 +14,7 @@ $card-width: 270px;
   justify-content: space-between;
   margin: 0;
   outline: 0px solid transparent;
-  padding: $space*2 $space*1.5 $space*4 $space*1.5;
+  padding: $space*2 $space*1.75 $space*4 $space*1.75;
   position: relative;
   width: $card-width;
   transition: all .2s ease-in-out;
@@ -37,9 +37,11 @@ $card-width: 270px;
     font-size: $font-size-11;
     padding: $space/4 $space/1.5 $space/8 $space/1.5;
     text-transform: uppercase;
+
     &--no-background {
       background-color: transparent;
     }
+
   }
 
   &__{
@@ -66,14 +68,29 @@ $card-width: 270px;
 
   &__list {
     align-self: flex-start;
-    text-align: left;
-    font-size: $font-size-14;
     color: $grey-dark;
-    list-style-image: url('../../static/check-mark-button.svg');
-    margin: 0 $space*2;
+    font-size: $font-size-14;
+    list-style: none;
+    margin: 0 0 0 $space*1.75;
+    text-align: left;
 
     &__item {
       margin: $space/2 0;
+      padding-bottom: 5px;
+      position: relative;
+
+      &:before {
+        background-image: url('../../static/check-mark-button.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 16px;
+        left: -26px;
+        position: absolute;
+        width: 16px;
+        top: 3px;
+      }
     }
   }
 

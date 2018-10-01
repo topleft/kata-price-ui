@@ -25,7 +25,7 @@ const cards = [
   {
     buttonText: 'Sign Up Today',
     frequency: '/mo',
-    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
+    list: ['Aliquet diam gravida', 'Phasellus eu condimentum', 'Metus non venenatis turpis'],
     pricePerMonth: 99,
     pricePerYear: 99*11,
     title: 'Professional'
