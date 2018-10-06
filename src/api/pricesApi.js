@@ -1,12 +1,11 @@
-// import prices from '../mockData/prices.json';
+import prices from '../mockData/prices.json';
 
-class PricesApi {
+export default class PricesApi {
+
   static getPrices() {
     return new Promise((resolve, reject) => {
-      // resolve(prices);
-      resolve();
-    })
+      resolve(prices);
+    });
   }
-}
 
-export default PricesApi;
+}

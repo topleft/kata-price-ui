@@ -1,3 +1,5 @@
-module.exports = {
-  PricesApi: require('./pricesApi'),
-}
+import PricesApi from './pricesApi';
+
+export {
+  PricesApi
+};

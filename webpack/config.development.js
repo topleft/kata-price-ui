@@ -50,10 +50,11 @@ module.exports = {
           'sass-loader',
         ]
       },
+      // {
+      //   test: /\.json$/,
+      //   use: 'json-loader'
+      // },
       {
-        test: /\.json$/,
-        use: 'json-loader'
-      },      {
         test: /\.(jpg|jpeg|png|gif|svg)$/,
         loaders: ['url-loader?limit=25000', 'img-loader']
       },
