@@ -13,49 +13,12 @@ const buttons = [
   {label: 'Annually', value: '/year'}
 ];
 
-const cards = [
-  {
-    buttonText: 'Sign Up Today',
-    frequency: '/mo',
-    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
-    pricePerMonth: 0,
-    pricePerYear: 0,
-    title: 'Free'
-  },
-  {
-    buttonText: 'Sign Up Today',
-    frequency: '/mo',
-    list: ['Aliquet diam gravida', 'Phasellus eu condimentum', 'Metus non venenatis turpis'],
-    pricePerMonth: 99,
-    pricePerYear: 99*11,
-    title: 'Professional'
-  },
-  {
-    buttonText: 'Sign Up Today',
-    frequency: '/mo',
-    highlightText: 'Recommended',
-    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
-    pricePerMonth: 219,
-    pricePerYear: 219*11,
-    title: 'Small Business'
-  },
-  {
-    buttonText: 'Sign Up Today',
-    frequency: '/mo',
-    list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],
-    pricePerMonth: 419,
-    pricePerYear: 419*11,
-    title: 'Enterprise'
-  }
-];
-
-
 class Content extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      cards
+      cards: []
     };
   }
 
@@ -64,9 +27,9 @@ class Content extends React.Component {
   }
 
   getPrices() {
-    // PricesApi.getPrices()
-    //   .then((prices) => this.setState({cards: prices}))
-    //   .catch(console.error);
+    PricesApi.getPrices()
+      .then((prices) => this.setState({cards: prices}))
+      .catch(console.error);
   }
 
   handleFrequencyClick(value) {
