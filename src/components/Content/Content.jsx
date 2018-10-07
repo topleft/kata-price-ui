@@ -9,8 +9,8 @@ import {PricesApi} from '../../api';
 const title = 'Pricing';
 const subtitle = 'Sign up in less than 30 seconds. Try out our 7 day risk free trial, upgrade at anytime, no questions, no hassle.';
 const buttons = [
-  {label: 'Monthly', value: '/mo'},
-  {label: 'Annually', value: '/year'}
+  {label: 'Monthly', value: 'mo'},
+  {label: 'Annually', value: 'year'}
 ];
 
 class Content extends React.Component {
@@ -18,7 +18,8 @@ class Content extends React.Component {
   constructor() {
     super();
     this.state = {
-      cards: []
+      cards: [],
+      frequency: 'mo'
     };
   }
 
@@ -32,16 +33,16 @@ class Content extends React.Component {
       .catch(console.error);
   }
 
-  handleFrequencyClick(value) {
-    const cards = this.state.cards.map((c) => {
-      c.frequency = value;
-      return c;
-    });
-    this.setState({cards});
+  handleFrequencyClick(frequency) {
+    this.setState({frequency});
+  }
+
+  handleCardClick(id) {
+    console.log(`Card clicked with id: ${id}`);
   }
 
   render() {
-    const {cards} = this.state;
+    const {cards, frequency} = this.state;
     return (
       <div className='content'>
         <header>
@@ -49,7 +50,7 @@ class Content extends React.Component {
         </header>
         <main>
           <ButtonBlock buttons={buttons} handleClick={(value) => { this.handleFrequencyClick(value);}}/>
-          <CardContainer cards={cards}/>
+          <CardContainer cards={cards} frequency={frequency} handleClick={(id) => this.handleCardClick(id)}/>
         </main>
       </div>
     );

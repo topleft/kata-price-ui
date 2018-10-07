@@ -1,35 +1,39 @@
 [
   {
-    "buttonText": "Sign Up Today",
-    "frequency": "/mo",
+    "id": "1",
     "list": ["Cras sodales lobortis erat", "Vitae pellentesque diam", "Consequat eted tempus"],
-    "pricePerMonth": 0,
-    "pricePerYear": 0,
-    "title": "Free"
+    "pricePer": {
+      "mo": 0,
+      "year": 0
+    },
+    "title": "Hobbyist"
   },
   {
-    "buttonText": "Sign Up Today",
-    "frequency": "/mo",
+    "id": "2",
     "list": ["Cras sodales lobortis erat", "Vitae pellentesque diam", "Consequat eted tempus"],
-    "pricePerMonth": 99,
-    "pricePerYear": 1089,
+    "pricePer": {
+      "mo": 99,
+      "year": 1089
+    },
     "title": "Professional"
   },
   {
-    "buttonText": "Sign Up Today",
-    "frequency": "/mo",
     "highlightText": "Recommended",
+    "id": "3",
     "list": ["Cras sodales lobortis erat", "Vitae pellentesque diam", "Consequat eted tempus"],
-    "pricePerMonth": 219,
-    "pricePerYear": 2189,
+    "pricePer": {
+      "mo": 219,
+      "year": 2189
+    },
     "title": "Small Business"
   },
   {
-    "buttonText": "Sign Up Today",
-    "frequency": "/mo",
+    "id": "4",
     "list": ["Cras sodales lobortis erat", "Vitae pellentesque diam", "Consequat eted tempus"],
-    "pricePerMonth": 419,
-    "pricePerYear": 4189,
+    "pricePer": {
+      "mo": 419,
+      "year": 4189
+    },
     "title": "Enterprise"
   }
 ]
