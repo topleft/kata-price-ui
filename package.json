@@ -18,6 +18,7 @@
     "autoprefixer": "^9.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -53,6 +54,9 @@
     "react-dom": "^16.4.1"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>setupEnzyme.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setupEnzyme.js",
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "<rootDir>/test/mocks/styleMock.js"
+    }
   }
 }

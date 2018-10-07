@@ -5,28 +5,30 @@ import './styles.scss';
 
 
 class CardContainer extends React.PureComponent {
-  constructor() {
-    super();
+
+  renderCards() {
+    const {cards, frequency} = this.props;
+    return cards.map((card, i) => {
+      const price = card.pricePer[frequency];
+      return <Card key={i} {...card} price={price} frequency={frequency} buttonText={'Sign Up Today'}/>;
+    });
   }
 
   render() {
-    const {cards} = this.props;
     return (
       <div className='card-container'>
-        {cards.map((card, i) => (
-          <Card key={i} {...card}/>
-        ))}
+        {this.renderCards()}
       </div>
     );
   }
 }
 
 CardContainer.propTypes = {
+  frequency: PropTypes.string,
   cards: PropTypes.arrayOf(PropTypes.shape({
-    frequency: PropTypes.string,
     highlightText: PropTypes.string,
     list: PropTypes.arrayOf(PropTypes.string),
-    price: PropTypes.number,
+    pricePer: PropTypes.object,
     title: PropTypes.string,
   })),
 };
