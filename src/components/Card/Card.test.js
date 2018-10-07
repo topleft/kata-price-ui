@@ -22,15 +22,18 @@ describe('PriceCard', () => {
 
     wrapper.setProps({highlightText: ''});
     expect(wrapper.find('.card__highlight').length).toBe(0);
-    expect(wrapper.find('.card__highlight--no-background').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').text()).toBe('');
 
     wrapper.setProps({highlightText: undefined});
     expect(wrapper.find('.card__highlight').length).toBe(0);
-    expect(wrapper.find('.card__highlight--no-background').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').text()).toBe('');
 
     wrapper.setProps({highlightText: null});
     expect(wrapper.find('.card__highlight').length).toBe(0);
-    expect(wrapper.find('.card__highlight--no-background').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').length).toBe(1);
+    expect(wrapper.find('.card__highlight--place-holder').text()).toBe('');
   });
 
   it('should render a title', () => {

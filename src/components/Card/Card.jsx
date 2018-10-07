@@ -9,8 +9,8 @@ class Card extends React.PureComponent {
 
   renderHightlight() {
     const {highlightText} = this.props;
-    const className = highlightText ? 'card__highlight' : 'card__highlight--no-background';
-    return <div className={className}>{highlightText || '&nbsp;'}</div>
+    const className = highlightText ? 'card__highlight' : 'card__highlight--place-holder';
+    return <div className={className}>{highlightText || ''}</div>;
   }
 
   render() {

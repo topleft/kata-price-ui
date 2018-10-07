@@ -35,10 +35,9 @@ $card-width: 260px;
     padding: $space/4 $space/1.5 $space/8 $space/1.5;
     text-transform: uppercase;
 
-    &--no-background {
-      background-color: transparent;
+    &--place-holder {
+      height: 1em;
     }
-
   }
 
   &__{
