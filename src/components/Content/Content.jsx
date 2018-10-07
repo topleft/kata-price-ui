@@ -2,6 +2,7 @@ import React from 'react';
 import Heading from '../Heading';
 import ButtonBlock from '../ButtonBlock';
 import CardContainer from '../CardContainer';
+import Modal from '../Modal';
 import './styles.scss';
 
 import {PricesApi} from '../../api';
@@ -19,7 +20,8 @@ class Content extends React.Component {
     super();
     this.state = {
       cards: [],
-      frequency: 'mo'
+      frequency: 'mo',
+      showModal: false
     };
   }
 
@@ -38,20 +40,35 @@ class Content extends React.Component {
   }
 
   handleCardClick(id) {
-    console.log(`Card clicked with id: ${id}`);
+    this.state.cards.filter((card) => {
+      if (card.id == id) {
+        console.log(card);
+      }
+      this.toggleModal();
+    });
+  }
+
+  toggleModal() {
+    this.setState({showModal: !this.state.showModal});
   }
 
   render() {
-    const {cards, frequency} = this.state;
+    const {
+      cards,
+      frequency,
+      showModal
+    } = this.state;
+
     return (
       <div className='content'>
         <header>
           <Heading title={title} subtitle={subtitle} />
         </header>
         <main>
-          <ButtonBlock buttons={buttons} handleClick={(value) => { this.handleFrequencyClick(value);}}/>
+          <ButtonBlock buttons={buttons} handleClick={(value) => {this.handleFrequencyClick(value)}}/>
           <CardContainer cards={cards} frequency={frequency} handleClick={(id) => this.handleCardClick(id)}/>
         </main>
+        {showModal ? <Modal title={'Sign Up!'} closeModal={() => this.toggleModal()}/> : null}
       </div>
     );
   }
