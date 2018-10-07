@@ -20,6 +20,7 @@ class Content extends React.Component {
     super();
     this.state = {
       cards: [],
+      card: null,
       frequency: 'mo',
       showModal: false
     };
@@ -42,10 +43,21 @@ class Content extends React.Component {
   handleCardClick(id) {
     this.state.cards.filter((card) => {
       if (card.id == id) {
-        console.log(card);
+        this.setState({card});
       }
       this.toggleModal();
     });
+  }
+
+  renderModal() {
+    const {card, frequency} = this.state;
+
+    const body = `The ${card.title} Plan for $${card.pricePer[frequency]} /${frequency}. Fusce suscipit libero eget elit. Praesent dapibus. Nullam rhoncus aliquam metus. Nulla non arcu lacinia neque faucibus fringilla. Nullam eget nisl. Etiam dictum tincidunt diam. Curabitur bibendum justo non orci. Duis condimentum augue id magna semper rutrum. Curabitur sagittis hendrerit ante. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Nullam at arcu a est sollicitudin euismod. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.`;
+    return <Modal
+      title={'Sign Up!'}
+      body={body}
+      buttonText={'Confirm'}
+      closeModal={() => this.toggleModal()}/>;
   }
 
   toggleModal() {
@@ -68,7 +80,7 @@ class Content extends React.Component {
           <ButtonBlock buttons={buttons} handleClick={(value) => {this.handleFrequencyClick(value)}}/>
           <CardContainer cards={cards} frequency={frequency} handleClick={(id) => this.handleCardClick(id)}/>
         </main>
-        {showModal ? <Modal title={'Sign Up!'} closeModal={() => this.toggleModal()}/> : null}
+        {showModal ? this.renderModal() : null}
       </div>
     );
   }

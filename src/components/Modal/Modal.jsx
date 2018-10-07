@@ -5,13 +5,14 @@ import './styles.scss';
 class Modal extends React.Component {
   render() {
 
-    const {title, body} = this.props;
+    const {title, body, buttonText} = this.props;
 
     return (
       <div className='backdrop'>
         <div className='modal'>
           <div className='modal__header'>
-            <h2>{title}</h2>
+            <p>{title}</p>
+            <p onClick={this.props.closeModal} className='close'></p>
           </div>
           <div className='modal__body'>
             <p>
@@ -19,7 +20,7 @@ class Modal extends React.Component {
             </p>
           </div>
           <div className='modal__footer'>
-            <button onClick={this.props.closeModal}>Close</button>
+            <button onClick={this.props.closeModal}>{buttonText}</button>
           </div>
         </div>
       </div>
