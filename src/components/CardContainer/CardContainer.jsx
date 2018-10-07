@@ -7,10 +7,10 @@ import './styles.scss';
 class CardContainer extends React.PureComponent {
 
   renderCards() {
-    const {cards, frequency} = this.props;
+    const {cards, frequency, handleClick} = this.props;
     return cards.map((card, i) => {
       const price = card.pricePer[frequency];
-      return <Card key={i} {...card} price={price} frequency={frequency} buttonText={'Sign Up Today'}/>;
+      return <Card key={i} {...card} price={price} frequency={frequency} buttonText={'Sign Up Today'} handleClick={handleClick}/>;
     });
   }
 
@@ -31,6 +31,7 @@ CardContainer.propTypes = {
     pricePer: PropTypes.object,
     title: PropTypes.string,
   })),
+  handleClick: PropTypes.func,
 };
 
 export default CardContainer;

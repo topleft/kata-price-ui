@@ -75,7 +75,7 @@ describe('PriceCard', () => {
   it('should call the handleButtonClick prop when button is clicked', () => {
     const clickFunc = jest.fn();
     const id = '1';
-    const wrapper = shallow(<Card handleButtonClick={clickFunc} id={id}/>);
+    const wrapper = shallow(<Card handleClick={clickFunc} id={id}/>);
     const button = wrapper.find('button');
     expect(clickFunc).toHaveBeenCalledTimes(0);
     button.simulate('click');
@@ -87,7 +87,7 @@ describe('PriceCard', () => {
     const card = {
       buttonText: 'Click Me',
       frequency: 'mo',
-      handleButtonClick: () => console.log(),
+      handleClick: () => console.log(),
       highlightText: 'Good Deal',
       id: '1',
       list: ['Cras sodales lobortis erat', 'Vitae pellentesque diam', 'Consequat eted tempus'],

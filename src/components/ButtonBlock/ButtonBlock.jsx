@@ -17,7 +17,6 @@ class ButtonBlock extends React.PureComponent {
 
   render() {
     const {buttons} = this.props;
-    // TODO: refactor into radio set
     return (
       <div className='button-block'>
         {buttons.map((button, i) => {
@@ -35,7 +34,10 @@ class ButtonBlock extends React.PureComponent {
 }
 
 ButtonBlock.propTypes = {
-  buttons: PropTypes.array.isRequired,
+  buttons: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.any,
+  })).isRequired,
   handleClick: PropTypes.func,
 };
 

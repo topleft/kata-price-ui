@@ -17,7 +17,7 @@ class Card extends React.PureComponent {
     const {
       buttonText,
       frequency,
-      handleButtonClick,
+      handleClick,
       id,
       list,
       price,
@@ -36,7 +36,7 @@ class Card extends React.PureComponent {
         <ul className='card__list'>
           {list.map((item, i) => <li key={i} className='card__list__item'>{item}</li>)}
         </ul>
-        <button className='card__button' onClick={() => handleButtonClick(id)}>{buttonText}</button>
+        <button className='card__button' onClick={() => handleClick(id)}>{buttonText}</button>
       </div>
     );
   }
@@ -49,7 +49,7 @@ Card.defaultProps = {
 Card.propTypes = {
   buttonText: PropTypes.string,
   frequency: PropTypes.oneOf('mo', 'year'),
-  handleButtonCLick: PropTypes.func,
+  handleCLick: PropTypes.func,
   highlightText: PropTypes.string,
   id: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),

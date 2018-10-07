@@ -37,6 +37,10 @@ class Content extends React.Component {
     this.setState({frequency});
   }
 
+  handleCardClick(id) {
+    console.log(`Card clicked with id: ${id}`);
+  }
+
   render() {
     const {cards, frequency} = this.state;
     return (
@@ -46,7 +50,7 @@ class Content extends React.Component {
         </header>
         <main>
           <ButtonBlock buttons={buttons} handleClick={(value) => { this.handleFrequencyClick(value);}}/>
-          <CardContainer cards={cards} frequency={frequency}/>
+          <CardContainer cards={cards} frequency={frequency} handleClick={(id) => this.handleCardClick(id)}/>
         </main>
       </div>
     );

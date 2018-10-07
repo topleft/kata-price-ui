@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     buttonText="Click Me"
     frequency="mo"
-    handleButtonClick={[Function]}
+    handleClick={[Function]}
     highlightText="Good Deal"
     id="1"
     list={
