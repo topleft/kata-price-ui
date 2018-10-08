@@ -1,4 +1,4 @@
-$black: #242F40;
+$black: #242f40;
 $green: #3CCF8E;
 $grey-light: #E4EDF2;
 $grey-dark: #5B6B82;
@@ -6,6 +6,7 @@ $orange: #FFB34B;
 $white: #FFFFFF;
 $white-tint: #F5FAFD;
 
+$black-med-opacity: rgba(36, 47, 64, 0.5);
 
 $regular-font: Helvetica, Arial, sans-serif;
 
@@ -26,10 +27,11 @@ $font-size-9: 0.9rem;
 //Spacing
 $space: 1.5rem;
 
-// Sizes
-$header-height: 41px;
-$header-margin: 3px;
-$subnav-height: 45px;
+// Easing
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
 
 
 
