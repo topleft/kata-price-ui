@@ -34,10 +34,11 @@ class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  buttonText: PropTypes.string,
   body: PropTypes.string,
   closeModal: PropTypes.func,
+  subtitle: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Modal;

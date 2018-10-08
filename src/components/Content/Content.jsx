@@ -53,7 +53,7 @@ class Content extends React.Component {
     const {card, frequency} = this.state;
 
     const subtitle = `The ${card.title} Plan for $${card.pricePer[frequency]} /${frequency}.`;
-    const body = `Fusce suscipit libero eget elit. Praesent dapibus. Nullam rhoncus aliquam metus. Nulla non arcu lacinia neque faucibus fringilla. Nullam eget nisl. Etiam dictum tincidunt diam. Curabitur bibendum justo non orci. Duis condimentum augue id magna semper rutrum. Curabitur sagittis hendrerit ante. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Nullam at arcu a est sollicitudin euismod. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.`;
+    const body = 'Fusce suscipit libero eget elit. Praesent dapibus. Nullam rhoncus aliquam metus. Nulla non arcu lacinia neque faucibus fringilla. Nullam eget nisl. Etiam dictum tincidunt diam. Curabitur bibendum justo non orci. Duis condimentum augue id magna semper rutrum. Curabitur sagittis hendrerit ante. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Nullam at arcu a est sollicitudin euismod. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.';
     return <Modal
       title={'Sign Up!'}
       subtitle={subtitle}
@@ -79,7 +79,7 @@ class Content extends React.Component {
           <Heading title={title} subtitle={subtitle} />
         </header>
         <main>
-          <ButtonBlock buttons={buttons} handleClick={(value) => {this.handleFrequencyClick(value)}}/>
+          <ButtonBlock buttons={buttons} handleClick={(value) => this.handleFrequencyClick(value)}/>
           <CardContainer cards={cards} frequency={frequency} handleClick={(id) => this.handleCardClick(id)}/>
         </main>
         {showModal ? this.renderModal() : null}

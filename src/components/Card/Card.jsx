@@ -49,7 +49,7 @@ Card.defaultProps = {
 Card.propTypes = {
   buttonText: PropTypes.string,
   frequency: PropTypes.oneOf('mo', 'year'),
-  handleCLick: PropTypes.func,
+  handleClick: PropTypes.func,
   highlightText: PropTypes.string,
   id: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
