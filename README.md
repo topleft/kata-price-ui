@@ -1,6 +1,6 @@
 ## Price UI
 
-My latest learning project is taking stranger's UI designs and turning them into functioning React apps. I search the internet for attractive designs with included sketch files. [dribble](https://dribbble.com/) is a great place for design resources and web inspiration. Looking for a clean, simple UI that included some user interaction I found [Sandeep Kasundra's](https://dribbble.com/sandeepkasundra) [Pricing example](https://dribbble.com/shots/5079559-Pricing).
+My latest learning project is taking UI designs I fond on the internet and turning them into functioning React apps. I search for attractive designs with included sketch files. [dribble](https://dribbble.com/) is a great place for design resources and web inspiration. Looking for a clean, simple UI that included some user interaction I found [Sandeep Kasundra's](https://dribbble.com/sandeepkasundra) [Pricing example](https://dribbble.com/shots/5079559-Pricing).
 
 Thanks Sandeep, great stuff!
 
