@@ -26,12 +26,14 @@ $card-width: 260px;
     z-index: 10;
   }
 
+
   &__highlight {
     background-color: $orange;
     border-radius: 2px;
     color: $white;
     display: inline-block;
     font-size: $font-size-11;
+    font-weight: $bold-font-weight;
     padding: $space/4 $space/1.5 $space/8 $space/1.5;
     text-transform: uppercase;
 
@@ -40,8 +42,8 @@ $card-width: 260px;
     }
   }
 
-  &__{
-    font-size: $font-size-11;
+  &__title {
+    font-weight: $bold-font-weight;
   }
 
   &__price {
@@ -54,6 +56,7 @@ $card-width: 260px;
 
     &__amount {
       font-size: $font-size-45;
+      font-weight: $bold-font-weight;
       margin: 0 $space/3;
     }
 
@@ -94,6 +97,7 @@ $card-width: 260px;
     border: 1px solid $grey-dark;
     border-radius: 4px;
     color: $grey-dark;
+    font-weight: $bold-font-weight;
     padding: $space/1.5 $space*1.5;
     text-transform: uppercase;
 

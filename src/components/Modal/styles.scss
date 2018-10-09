@@ -39,6 +39,7 @@
   &__header {
     display: flex;
     font-size: $font-size-34;
+    font-weight: $bold-font-weight;
     justify-content: space-between;
     position: relative;
 
@@ -72,6 +73,7 @@
       border: 1px solid $grey-dark;
       border-radius: 4px;
       color: $grey-dark;
+      font-weight: $bold-font-weight;
       padding: $space/1.5 $space*1.5;
       text-transform: uppercase;
 

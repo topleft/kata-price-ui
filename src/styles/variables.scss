@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+
 $black: #242f40;
 $green: #3CCF8E;
 $grey-light: #E4EDF2;
@@ -8,7 +11,10 @@ $white-tint: #F5FAFD;
 
 $black-med-opacity: rgba(36, 47, 64, 0.5);
 
-$regular-font: Helvetica, Arial, sans-serif;
+
+$regular-font: Montserrat, Helvetica, sans-serif;
+$bold-font: Montserrat, Helvetica, sans-serif;
+$bold-font-weight: 700;
 
 $font-size-base: 1.6rem; // Use browser default font-size, usually 16px
 
