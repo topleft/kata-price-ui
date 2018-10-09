@@ -1,0 +1,432 @@
+.heading {
+  margin: auto;
+  padding: 6rem 0;
+  text-align: center;
+  width: 500px; }
+  @media screen and (max-width: 540px) {
+    .heading {
+      max-width: 100%; } }
+  .heading__title {
+    font-size: 3.4rem;
+    margin-bottom: 3rem; }
+  .heading__subtitle {
+    color: #5B6B82;
+    font-size: 1.4rem; }
+
+.button-block {
+  border-radius: 3px;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; }
+  @media screen and (min-width: 540px) {
+    .button-block {
+      display: block;
+      width: 300px; } }
+  .button-block__button {
+    background-color: #E4EDF2;
+    border: none;
+    color: #5B6B82;
+    cursor: pointer;
+    display: block;
+    padding: 1.5rem 4.5rem;
+    text-transform: uppercase;
+    width: 100%; }
+    @media screen and (min-width: 540px) {
+      .button-block__button {
+        display: inline-block;
+        width: 50%; } }
+    .button-block__button.active {
+      color: #FFFFFF;
+      background-color: #3CCF8E; }
+
+.card {
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 20px #E4EDF2;
+          box-shadow: 0px 0px 20px #E4EDF2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 400px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  min-width: 260px;
+  outline: 0px solid transparent;
+  padding: 3rem 2.625rem 6rem 2.625rem;
+  position: relative;
+  width: 260px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .card:hover {
+    outline: 2px solid #3CCF8E;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    z-index: 10; }
+  .card__highlight {
+    background-color: #FFB34B;
+    border-radius: 2px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0.375rem 1rem 0.1875rem 1rem;
+    text-transform: uppercase; }
+    .card__highlight--place-holder {
+      height: 1em; }
+  .card__ {
+    font-size: 1.1rem; }
+  .card__price {
+    color: #242f40; }
+    .card__price__currency-symbol {
+      font-size: 1.6rem; }
+    .card__price__amount {
+      font-size: 4.5rem;
+      margin: 0 0.5rem; }
+    .card__price__frequency {
+      color: #5B6B82; }
+  .card__list {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    color: #5B6B82;
+    font-size: 1.4rem;
+    list-style: none;
+    margin: 0 0 0 2.625rem;
+    text-align: left; }
+    .card__list__item {
+      margin: 0.75rem 0;
+      padding-bottom: 5px;
+      position: relative; }
+      .card__list__item:before {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTUgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1tYXJrLWJ1dHRvbjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJjaGVjay1tYXJrLWJ1dHRvbiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS4wMDAwMDAsIDAuMDAwMDAwKSIgZmlsbD0iIzNDQ0Y4RSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02Ljc1NjMzNDQ1LDAuMTMyODE2MDU0IEMzLjAzMTExNzA2LDAuMTMyODE2MDU0IDAsMy4xNjM5MzMxMSAwLDYuODg5NDUzNzMgQzAsMTAuNjE0NjcxMSAzLjAzMTExNzA2LDEzLjY0NTc4ODIgNi43NTYzMzQ0NSwxMy42NDU3ODgyIEMxMC40ODE1NTE4LDEzLjY0NTc4ODIgMTMuNTEyNjY4OSwxMC42MTQ2NzExIDEzLjUxMjY2ODksNi44ODk0NTM3MyBDMTMuNTEyNjY4OSwzLjE2MzkzMzExIDEwLjQ4MTU1MTgsMC4xMzI4MTYwNTQgNi43NTYzMzQ0NSwwLjEzMjgxNjA1NCBaIE02Ljc1NjMzNDQ1LDEyLjU1NTk2ODggQzMuNjMxODIxNjMsMTIuNTU1OTY4OCAxLjA4ODYwNjQ3LDEwLjAxMzk2NjYgMS4wODg2MDY0Nyw2Ljg4OTQ1MzczIEMxLjA4ODYwNjQ3LDMuNzYzNDI0NzUgMy42MzE4MjE2MywxLjIyMTQyMjUyIDYuNzU2MzM0NDUsMS4yMjE0MjI1MiBDOS44ODExNTA1LDEuMjIxNDIyNTIgMTIuNDIzMTUyNywzLjc2NDYzNzY4IDEyLjQyMzE1MjcsNi44ODk0NTM3MyBDMTIuNDIzMTUyNywxMC4wMTM5NjY2IDkuODgxMTUwNSwxMi41NTU5Njg4IDYuNzU2MzM0NDUsMTIuNTU1OTY4OCBaIiBpZD0iRmlsbC0xIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTguOTA5ODk1MjEsNC43MzQ2ODAwNCBMNS43NTY1NzUyNSw3Ljg4OTIxMjkzIEw0LjYwMTg2Mzk5LDYuNzM0MTk4NDQgQzQuMzg5OTA0MTIsNi41MjIyMzg1NyA0LjA0NTEyODIxLDYuNTIyMjM4NTcgMy44MzMxNjgzNCw2LjczNDE5ODQ0IEMzLjYxOTk5NTU0LDYuOTQ3MzcxMjQgMy42MTk5OTU1NCw3LjI5MjE0NzE2IDMuODMzMTY4MzQsNy41MDQxMDcwMiBMNS4zNzE3NzI1OCw5LjA0MzkyNDE5IEM1LjQ3ODIwNzM2LDkuMTQ5NDQ5MjggNS42MTY3ODQ4NCw5LjIwMjgxODI4IDUuNzU2NTc1MjUsOS4yMDI4MTgyOCBDNS44OTUxNTI3Myw5LjIwMjgxODI4IDYuMDM0OTQzMTQsOS4xNDk0NDkyOCA2LjE0MTY4MTE2LDkuMDQzOTI0MTkgTDkuNjc5ODAzNzksNS41MDQ1ODg2MyBDOS44OTI5NzY1OSw1LjI5MTQxNTgzIDkuODkyOTc2NTksNC45NDc4NTI4NCA5LjY3OTgwMzc5LDQuNzM0NjgwMDQgQzkuNDY3ODQzOTIsNC41MjI3MjAxOCA5LjEyMzA2OCw0LjUyMjcyMDE4IDguOTA5ODk1MjEsNC43MzQ2ODAwNCBaIiBpZD0iRmlsbC00Ij48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: 16px;
+        left: -26px;
+        position: absolute;
+        width: 16px;
+        top: 3px; }
+  .card__button {
+    border: 1px solid #5B6B82;
+    border-radius: 4px;
+    color: #5B6B82;
+    padding: 1rem 2.25rem;
+    text-transform: uppercase; }
+    .card__button:hover {
+      background-color: #3CCF8E;
+      border-color: #3CCF8E;
+      color: #FFFFFF;
+      cursor: pointer; }
+
+.card-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8.25rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media screen and (min-width: 540px) {
+    .card-container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      max-width: 600px; } }
+  @media screen and (min-width: 1120px) {
+    .card-container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      max-width: 100%; } }
+
+.backdrop {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(36, 47, 64, 0.5);
+  color: #242f40;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-animation: 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 modalFadeIn;
+          animation: 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 modalFadeIn; }
+
+.modal {
+  -webkit-animation: 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 modalSlideUp;
+          animation: 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s 1 modalSlideUp;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 20px #242f40;
+          box-shadow: 0px 0px 20px #242f40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 50%;
+  margin-bottom: 100px;
+  padding: 4.5rem 4.5rem 4.5rem 4.5rem;
+  position: fixed;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 650px;
+  z-index: 1000; }
+  @media screen and (max-width: 650px) {
+    .modal {
+      width: 100%;
+      border-radius: 0px; } }
+  .modal__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 3.4rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    .modal__header .close {
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTE0cHgiIGhlaWdodD0iMTE3cHgiIHZpZXdCb3g9IjAgMCAxMTQgMTE3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1MS4zICg1NzU0NCkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+Y2xvc2U8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Ni4wMDAwMDAsIC00NS4wMDAwMDApIiBmaWxsPSIjRjVBNjIzIj4KICAgICAgICAgICAgPGcgaWQ9ImNsb3NlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0Ni4wMDAwMDAsIDQ1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IngiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU3LjAwMDAwMCwgNTcuNTAwMDAwKSByb3RhdGUoNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTU3LjAwMDAwMCwgLTU3LjUwMDAwMCkgdHJhbnNsYXRlKC0xMy4wMDAwMDAsIDQ3LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIGZpbGwtcnVsZT0ibm9uemVybyIgeD0iMCIgeT0iMCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIyMSI+PC9yZWN0PgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPGcgaWQ9ImhhbWJ1Z2VyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1Ny4wMDAwMDAsIDU5LjUwMDAwMCkgcm90YXRlKDEzNS4wMDAwMDApIHRyYW5zbGF0ZSgtNTcuMDAwMDAwLCAtNTkuNTAwMDAwKSB0cmFuc2xhdGUoLTEzLjAwMDAwMCwgNDkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbC1ydWxlPSJub256ZXJvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+      background-repeat: no-repeat;
+      background-size: 20px;
+      color: #5B6B82;
+      cursor: pointer;
+      height: 20px;
+      position: absolute;
+      right: -16px;
+      width: 20px;
+      top: -18px; }
+  .modal__subtitle {
+    font-size: 2.1rem;
+    color: #5B6B82; }
+  .modal__footer {
+    margin-top: 3rem;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    bottom: 0;
+    width: 100%; }
+    .modal__footer button {
+      border: 1px solid #5B6B82;
+      border-radius: 4px;
+      color: #5B6B82;
+      padding: 1rem 2.25rem;
+      text-transform: uppercase; }
+      .modal__footer button:hover {
+        background-color: #3CCF8E;
+        border-color: #3CCF8E;
+        color: #FFFFFF;
+        cursor: pointer; }
+
+@-webkit-keyframes modalFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes modalSlideUp {
+  from {
+    top: 75%; }
+  to {
+    top: 40%; } }
+
+@keyframes modalSlideUp {
+  from {
+    top: 75%; }
+  to {
+    top: 40%; } }
+
+@media screen and (max-width: 360px) {
+  .content {
+    padding: 1.125rem 0.75rem; } }
+
+body {
+  background-color: #F5FAFD; }
+
+/*
+ * Defaults Styles
+ **
+ * HTML Reset
+ * Base styles
+ */
+/********************************************************** Viewport */
+@-webkit-viewport {
+  width: device-width; }
+
+@-moz-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+/********************************************************** Box Sizing *
+   Box Sizing
+   Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
+   border-box polyfill for IE 6/7: https://github.com/Schepp/box-sizing-polyfill#readme
+
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-y: auto; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/********************************************************** General */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  color: #242f40;
+  text-decoration: underline;
+  outline: 0; }
+  a:focus {
+    outline: 0; }
+  a:hover, a:active {
+    outline: 0; }
+
+button:focus, button:active {
+  outline: 0; }
+
+/********************************************************** Typography */
+body {
+  background: #F5FAFD;
+  color: #242f40;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 0 1.5rem; }
+
+ul,
+ol,
+dl {
+  line-height: 1.5;
+  list-style: none;
+  margin: 0 0 0 1.5rem;
+  padding: 0 0 0.75rem; }
+
+p ul,
+ul ul,
+ol ul,
+p ol,
+ul ol,
+ol ol {
+  padding-bottom: 0; }
+
+strong {
+  font-weight: bold; }
+
+code {
+  font-size: 1.6rem;
+  line-height: 1.5; }
+
+input,
+textarea {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+/**********************************************************
+   Clearfix
+   css/app/utilities/_clearfix
+ */
+/*
+  *
+  * http://nicolasgallagher.com/micro-clearfix-hack/
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    contenteditable attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that are clearfixed.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.clearfix {
+  zoom: 1; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.full-height {
+  height: 100%; }
+
